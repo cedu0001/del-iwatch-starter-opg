@@ -1,14 +1,21 @@
+"use client";
 import Image from "next/image";
-import Heading from "./components/Heading";
-import Text from "./components/Text";
+import { useState } from "react";
+
+import LandingPageText from "./components/LandingPageText";
+import LandingPagePicture from "./components/LandingPagePicture";
+import Dots from "./components/Dots";
+import BuyBtn from "./components/BuyBtn";
+import Thumbnail from "./components/Thumbnail";
+import ArrowRight from "./components/ArrowRight";
+import ArrowLeft from "./components/ArrowLeft";
 
 import { FaApple } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
+	const [activeWatchImage, setActiveWatchImage] = useState("/navy.png");
 	return (
 		<>
 			<header>
@@ -29,6 +36,42 @@ export default function Home() {
 			</header>
 
 			<main>
+				<section className="grid-3-2-1">
+					<LandingPageText />
+					<Image src={activeWatchImage} alt="iWatch" width={500} height={500} />
+					<div>
+						<Dots />
+						<Dots />
+						<Dots />
+					</div>
+				</section>
+				<section className="grid-test">
+					<BuyBtn />
+				</section>
+				<section className="grid-test">
+					<div className="flex justify-evenly">
+						<ArrowLeft />
+
+						<ArrowRight />
+					</div>
+					<div className="flex">
+						<div className="bg-card">
+							<Thumbnail imgsrc="/navy.png" setActiveWatchImage={setActiveWatchImage} />
+						</div>
+						<div className="bg-card">
+							<Thumbnail imgsrc="/mint.png" setActiveWatchImage={setActiveWatchImage} />
+						</div>
+						<div className="bg-card">
+							<Thumbnail imgsrc="/ocean.png" setActiveWatchImage={setActiveWatchImage} />
+						</div>
+					</div>
+				</section>
+			</main>
+		</>
+	);
+}
+
+/* 	<main>
 				<section>
 					<div>
 						<h1>
@@ -79,7 +122,4 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-			</main>
-		</>
-	);
-}
+			</main> */
