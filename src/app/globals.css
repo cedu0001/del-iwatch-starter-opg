@@ -1,26 +1,176 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* @theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+} */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: linear-gradient(90deg, rgba(200, 220, 229, 1) 0%, rgba(182, 204, 218, 1) 100%);
+		--foreground: #ededed;
+	}
+}
+
+h1,
+h2,
+button,
+p {
+	color: white;
+}
+
+h1 {
+	font-size: 64px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 1200px;
+	margin-inline: auto;
+}
+
+/* Header */
+
+.nav-style {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	margin-block: 45px;
+
+	.apple-logo {
+		grid-column: 1;
+		justify-self: start center;
+		align-self: center;
+	}
+
+	ul {
+		grid-column: 2;
+		align-self: center;
+		display: flex;
+		gap: 1em;
+
+		:hover {
+			background-color: #ffffff;
+			color: rgba(182, 204, 218, 1);
+			cursor: pointer;
+			padding: 10px 60px;
+			border-radius: 20px;
+		}
+	}
+
+	li {
+		padding: 10px 60px;
+		border-radius: 20px;
+		font-size: 18px;
+	}
+
+	div {
+		grid-column: 3;
+		justify-self: end;
+		align-self: center;
+		display: flex;
+		gap: 1em;
+	}
+}
+
+/* Landing page */
+section {
+	display: grid;
+	grid-auto-rows: auto;
+	grid-auto-columns: repeat(6, 1fr);
+	grid-template-areas: "a a a b b c" "d d d b b c" "e e e f f c";
+	margin-bottom: 50px;
+
+	:nth-child(1) {
+		align-self: start;
+		grid-area: a;
+	}
+	:nth-child(2) {
+		grid-area: b;
+	}
+	:nth-child(3) {
+		align-self: center;
+		grid-area: c;
+		display: flex;
+		flex-direction: column;
+
+		p {
+			text-align: center;
+		}
+
+		button {
+			border-radius: 100%;
+			padding: 10px;
+			border: 2px solid white;
+		}
+
+		button#navy {
+			background-color: #404354;
+		}
+
+		button#mint {
+			background-color: #58d7c4;
+		}
+
+		button#coral {
+			background-color: #f2cec6;
+		}
+	}
+	:nth-child(4) {
+		grid-area: d;
+	}
+	:nth-child(5) {
+		grid-area: e;
+		div {
+			display: flex;
+			flex-direction: row;
+			justify-items: baseline;
+			gap: 1em;
+		}
+	}
+	:nth-child(6) {
+		display: flex;
+		flex-direction: row;
+		grid-area: f;
+	}
+}
+
+button.buy-btn {
+	padding: 20px 60px;
+	border: solid white 2px;
+	border-radius: 42px;
+	font-size: 24px;
+}
+
+button.buy-btn:hover {
+	font-size: 24px;
+	background-color: #ffffff;
+	color: rgba(182, 204, 218, 1);
+	cursor: pointer;
+	padding: 20px 60px;
+	border-radius: 42px;
+}
+
+div.bg-card {
+	background-color: #434558;
+	padding: 5px 30px;
+	border-radius: 10px;
+	margin: 0px 30px;
+}
+
+div.bg-card:nth-child(2) {
+	background-color: #6addccc3;
+}
+
+div.bg-card:nth-child(3) {
+	background-color: #f9cdc4da;
 }
