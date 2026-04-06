@@ -9,6 +9,7 @@ import BuyBtn from "./components/BuyBtn";
 import Thumbnail from "./components/Thumbnail";
 import ArrowRight from "./components/ArrowRight";
 import ArrowLeft from "./components/ArrowLeft";
+import ArrowNav from "./components/ArrowNav";
 
 import { FaApple } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
@@ -49,12 +50,11 @@ export default function Home() {
 					<BuyBtn />
 				</section>
 				<section className="grid-test">
-					<div className="flex justify-evenly">
-						<ArrowLeft />
-
-						<ArrowRight />
+					<div className="ar-nav">
+						<ArrowNav />
 					</div>
-					<div className="flex">
+
+					<div className="flex space">
 						<div className="bg-card">
 							<Thumbnail imgsrc="/navy.png" setActiveWatchImage={setActiveWatchImage} />
 						</div>
@@ -70,56 +70,3 @@ export default function Home() {
 		</>
 	);
 }
-
-/* 	<main>
-				<section>
-					<div>
-						<h1>
-							<span>The Perfect Moment</span> <br /> Between Past And Future.
-						</h1>
-					</div>
-
-					<div>
-						<Image src="/navy.png" width={500} height={500} alt="et iWatch ur" loading="eager" />
-					</div>
-
-					<div>
-						<button className="item-scroll" id="navy"></button>
-						<p>|</p>
-						<button className="item-scroll" id="mint"></button>
-						<p>|</p>
-						<button className="item-scroll" id="coral"></button>
-					</div>
-
-					<div>
-						<button className="buy-btn">Buy Now</button>
-					</div>
-
-					<div>
-						<div>
-							<button>
-								<FaArrowLeft />
-							</button>
-							<p>1</p>
-							<button>
-								<FaArrowRight />
-							</button>
-						</div>
-					</div>
-
-					<div>
-						<div className="bg-card">
-							{" "}
-							<Image src="/navy.png" width={90} height={90} alt="et iWatch ur" loading="eager" />
-						</div>
-						<div className="bg-card">
-							{" "}
-							<Image src="/mint.png" width={90} height={90} alt="et iWatch ur" loading="eager" />
-						</div>
-						<div className="bg-card">
-							{" "}
-							<Image src="/ocean.png" width={90} height={90} alt="et iWatch ur" loading="eager" />
-						</div>
-					</div>
-				</section>
-			</main> */
