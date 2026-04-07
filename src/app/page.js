@@ -40,9 +40,24 @@ export default function Home() {
 					<LandingPageText />
 					<Image src={activeWatchImage} alt="iWatch" width={500} height={500} />
 					<div>
-						<Dots color="#434558" relatedImage="/navy.png" setActiveWatchImage={setActiveWatchImage} />
-						<Dots color="#6addcc" relatedImage="/mint.png" setActiveWatchImage={setActiveWatchImage} />
-						<Dots color="#b6ccda" relatedImage="/ocean.png" setActiveWatchImage={setActiveWatchImage} />
+						<Dots
+							color="#434558"
+							relatedImage="/navy.png"
+							activeWatchImage={activeWatchImage}
+							setActiveWatchImage={setActiveWatchImage}
+						/>
+						<Dots
+							color="#6addcc"
+							relatedImage="/mint.png"
+							activeWatchImage={activeWatchImage}
+							setActiveWatchImage={setActiveWatchImage}
+						/>
+						<Dots
+							color="#ddf3fd"
+							relatedImage="/ocean.png"
+							activeWatchImage={activeWatchImage}
+							setActiveWatchImage={setActiveWatchImage}
+						/>
 					</div>
 				</section>
 				<section className="grid-test">
