@@ -3,17 +3,16 @@ import Image from "next/image";
 import { useState } from "react";
 
 import LandingPageText from "./components/LandingPageText";
-import LandingPagePicture from "./components/LandingPagePicture";
 import Dots from "./components/Dots";
 import BuyBtn from "./components/BuyBtn";
 import Thumbnail from "./components/Thumbnail";
-import ArrowRight from "./components/ArrowRight";
-import ArrowLeft from "./components/ArrowLeft";
 import ArrowNav from "./components/ArrowNav";
 
 import { FaApple } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
+
+/* import "./globals.css"; */
 
 export default function Home() {
 	const [activeWatchImage, setActiveWatchImage] = useState("/navy.png");
@@ -41,9 +40,9 @@ export default function Home() {
 					<LandingPageText />
 					<Image src={activeWatchImage} alt="iWatch" width={500} height={500} />
 					<div>
-						<Dots />
-						<Dots />
-						<Dots />
+						<Dots color="#434558" relatedImage="/navy.png" setActiveWatchImage={setActiveWatchImage} />
+						<Dots color="#6addcc" relatedImage="/mint.png" setActiveWatchImage={setActiveWatchImage} />
+						<Dots color="#b6ccda" relatedImage="/ocean.png" setActiveWatchImage={setActiveWatchImage} />
 					</div>
 				</section>
 				<section className="grid-test">
@@ -56,7 +55,7 @@ export default function Home() {
 
 					<div className="flex space">
 						<div className="bg-card">
-							<Thumbnail imgsrc="/navy.png" setActiveWatchImage={setActiveWatchImage} />
+							<Thumbnail loading="eager" imgsrc="/navy.png" setActiveWatchImage={setActiveWatchImage} />
 						</div>
 						<div className="bg-card">
 							<Thumbnail imgsrc="/mint.png" setActiveWatchImage={setActiveWatchImage} />

@@ -170,6 +170,19 @@ div.bg-card:nth-child(3) {
 	gap: 3em;
 }
 
+.dot-selected {
+	width: clamp(24px, 19.5px + 1.125cqi, 33px);
+	height: clamp(24px, 19.5px + 1.125cqi, 33px);
+	border-radius: 99px;
+	border: 3px solid white;
+	margin-bottom: 10px;
+
+	&:hover {
+		box-shadow: #17171748 0 2px 5px;
+		cursor: pointer;
+	}
+}
+
 /* section {
 	display: grid;
 	grid-auto-rows: auto;
