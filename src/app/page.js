@@ -13,82 +13,95 @@ import { FaSearch } from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
 
 export default function Home() {
-	const [activeWatchImage, setActiveWatchImage] = useState("/navy.png");
-	return (
-		<>
-			<header>
-				<nav className="grid grid-cols-[1fr_auto_1fr] items-center my-[45px]">
-					<FaApple size={50} className="col-start-1 justify-self-start self-center w-fit" />
+  const [activeWatchImage, setActiveWatchImage] = useState("/navy.png");
+  return (
+    <>
+      <header>
+        <nav className="my-[45px] grid grid-cols-[1fr_auto_1fr] items-center">
+          <FaApple
+            size={50}
+            className="col-start-1 w-fit self-center justify-self-start"
+          />
 
-					<ul className="col-start-2 flex items-center gap-[1em]">
-						<li className="px-[60px] py-[10px] rounded-[20px] text-[18px] hover:bg-white hover:text-[rgba(182,204,218,1)] hover:cursor-pointer">
-							Mac
-						</li>
-						<li className="px-[60px] py-[10px] rounded-[20px] text-[18px] hover:bg-white hover:text-[rgba(182,204,218,1)] hover:cursor-pointer">
-							Iphone
-						</li>
-						<li className="px-[60px] py-[10px] rounded-[20px] text-[18px] hover:bg-white hover:text-[rgba(182,204,218,1)] hover:cursor-pointer">
-							Ipad
-						</li>
-						<li className="px-[60px] py-[10px] rounded-[20px] text-[18px] hover:bg-white hover:text-[rgba(182,204,218,1)] hover:cursor-pointer">
-							Support
-						</li>
-					</ul>
+          <ul className="col-start-2 flex items-center gap-[1em]">
+            <li className="rounded-[20px] px-[60px] py-[10px] text-[18px] hover:cursor-pointer hover:bg-white hover:text-[rgba(182,204,218,1)]">
+              Mac
+            </li>
+            <li className="rounded-[20px] px-[60px] py-[10px] text-[18px] hover:cursor-pointer hover:bg-white hover:text-[rgba(182,204,218,1)]">
+              Iphone
+            </li>
+            <li className="rounded-[20px] px-[60px] py-[10px] text-[18px] hover:cursor-pointer hover:bg-white hover:text-[rgba(182,204,218,1)]">
+              Ipad
+            </li>
+            <li className="rounded-[20px] px-[60px] py-[10px] text-[18px] hover:cursor-pointer hover:bg-white hover:text-[rgba(182,204,218,1)]">
+              Support
+            </li>
+          </ul>
 
-					<div className="col-start-3 justify-self-end self-center flex gap-[1em]">
-						<FaSearch size={24} />
-						<p>|</p>
-						<RiShoppingBag3Line size={24} />
-					</div>
-				</nav>
-			</header>
+          <div className="col-start-3 flex gap-[1em] self-center justify-self-end">
+            <FaSearch size={25} />
+            <p>|</p>
+            <RiShoppingBag3Line size={25} />
+          </div>
+        </nav>
+      </header>
 
-			<main>
-				<section className="grid grid-cols-[3fr_2fr_0.5fr] gap-[1em] first:col-[1/2] last:self-center">
-					<LandingPageText />
-					<Image src={activeWatchImage} alt="iWatch" width={500} height={500} />
-					<div className="flex flex-col justify-center">
-						<Dots
-							color="#434558"
-							relatedImage="/navy.png"
-							activeWatchImage={activeWatchImage}
-							setActiveWatchImage={setActiveWatchImage}
-						/>
-						<Dots
-							color="#6addcc"
-							relatedImage="/mint.png"
-							activeWatchImage={activeWatchImage}
-							setActiveWatchImage={setActiveWatchImage}
-						/>
-						<Dots
-							color="#ddf3fd"
-							relatedImage="/ocean.png"
-							activeWatchImage={activeWatchImage}
-							setActiveWatchImage={setActiveWatchImage}
-						/>
-					</div>
-				</section>
-				<section className="grid grid-cols-[3fr_2fr_0.5fr] mb-[50px] justify-self-start w-fit">
-					<BuyBtn />
-				</section>
-				<section className="grid grid-cols-[3fr_2fr_0.5fr] mb-[50px]">
-					<div className="first:self-end first:h-fit">
-						<ArrowNav />
-					</div>
+      <main>
+        <section className="grid grid-cols-[3fr_2fr_0.5fr] gap-[1em] first:col-[1/2] last:self-center">
+          <LandingPageText />
+          <Image src={activeWatchImage} alt="iWatch" width={500} height={500} />
+          <div className="flex flex-col justify-center">
+            <Dots
+              color="#434558"
+              relatedImage="/navy.png"
+              activeWatchImage={activeWatchImage}
+              setActiveWatchImage={setActiveWatchImage}
+            />
+            <Dots
+              color="#6addcc"
+              relatedImage="/mint.png"
+              activeWatchImage={activeWatchImage}
+              setActiveWatchImage={setActiveWatchImage}
+            />
+            <Dots
+              color="#ddf3fd"
+              relatedImage="/ocean.png"
+              activeWatchImage={activeWatchImage}
+              setActiveWatchImage={setActiveWatchImage}
+            />
+          </div>
+        </section>
+        <section className="mb-[50px] grid w-fit grid-cols-[3fr_2fr_0.5fr] justify-self-start">
+          <BuyBtn />
+        </section>
+        <section className="mb-[50px] grid grid-cols-[3fr_2fr_0.5fr]">
+          <div className="first:h-fit first:self-end">
+            <ArrowNav />
+          </div>
 
-					<div className="flex justify-space-between gap-[1.5em]">
-						<div className="relative rounded-[10px] pt-0 before:content-[''] before:absolute before:inset-y-[3rem] before:inset-x-0 before:bg-[#434558c3] before:rounded-[0.75rem] before:z-[-1] before:max-w-full before:w-[150px] before:max-h-full before:h-[80px]">
-							<Thumbnail loading="eager" imgsrc="/navy.png" setActiveWatchImage={setActiveWatchImage} />
-						</div>
-						<div className="relative rounded-[10px] pt-0 before:content-[''] before:absolute before:inset-y-[3rem] before:inset-x-0 before:bg-[#6addcc] before:rounded-[0.75rem] before:z-[-1] before:max-w-full before:w-[150px] before:max-h-full before:h-[80px]">
-							<Thumbnail imgsrc="/mint.png" setActiveWatchImage={setActiveWatchImage} />
-						</div>
-						<div className="relative rounded-[10px] pt-0 before:content-[''] before:absolute before:inset-y-[3rem] before:inset-x-0 before:bg-[#ddf3fd] before:rounded-[0.75rem] before:z-[-1] before:max-w-full before:w-[150px] before:max-h-full before:h-[80px]">
-							<Thumbnail imgsrc="/ocean.png" setActiveWatchImage={setActiveWatchImage} />
-						</div>
-					</div>
-				</section>
-			</main>
-		</>
-	);
+          <div className="justify-space-between flex gap-[1.5em]">
+            <div className="relative rounded-[10px] pt-0 before:absolute before:inset-x-0 before:inset-y-[3rem] before:z-[-1] before:h-[80px] before:max-h-full before:w-[150px] before:max-w-full before:rounded-[0.75rem] before:bg-[#434558c3] before:content-['']">
+              <Thumbnail
+                loading="eager"
+                imgsrc="/navy.png"
+                setActiveWatchImage={setActiveWatchImage}
+              />
+            </div>
+            <div className="relative rounded-[10px] pt-0 before:absolute before:inset-x-0 before:inset-y-[3rem] before:z-[-1] before:h-[80px] before:max-h-full before:w-[150px] before:max-w-full before:rounded-[0.75rem] before:bg-[#6addcc] before:content-['']">
+              <Thumbnail
+                imgsrc="/mint.png"
+                setActiveWatchImage={setActiveWatchImage}
+              />
+            </div>
+            <div className="relative rounded-[10px] pt-0 before:absolute before:inset-x-0 before:inset-y-[3rem] before:z-[-1] before:h-[80px] before:max-h-full before:w-[150px] before:max-w-full before:rounded-[0.75rem] before:bg-[#ddf3fd] before:content-['']">
+              <Thumbnail
+                imgsrc="/ocean.png"
+                setActiveWatchImage={setActiveWatchImage}
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
