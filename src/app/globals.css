@@ -21,7 +21,6 @@
 
 h1,
 h2,
-button,
 p {
 	color: white;
 }
@@ -122,7 +121,7 @@ section.grid-test {
 button.buy-style:hover {
 	font-size: 24px;
 	background-color: #ffffff;
-	color: rgba(182, 204, 218, 1);
+	color: #b6ccda;
 	cursor: pointer;
 	padding: 20px 60px;
 	border-radius: 42px;
@@ -185,110 +184,3 @@ div.bg-card:nth-child(3) {
 .myborder {
 	border: 3px solid white;
 }
-
-/* section {
-	display: grid;
-	grid-auto-rows: auto;
-	grid-auto-columns: repeat(6, 1fr);
-	grid-template-areas: "a a a b b c" "d d d b b c" "e e e f f c";
-	margin-bottom: 50px;
-
-	:nth-child(1) {
-		align-self: start;
-		grid-area: a;
-	}
-	:nth-child(2) {
-		grid-area: b;
-	}
-	:nth-child(3) {
-		align-self: center;
-		grid-area: c;
-		display: flex;
-		flex-direction: column;
-
-		p {
-			text-align: center;
-		}
-
-		button {
-			border-radius: 100%;
-			padding: 10px;
-			border: 2px solid white;
-		}
-
-		button#navy {
-			background-color: #404354;
-		}
-
-		button#mint {
-			background-color: #58d7c4;
-		}
-
-		button#coral {
-			background-color: #f2cec6;
-		}
-	}
-	:nth-child(4) {
-		grid-area: d;
-	}
-	:nth-child(5) {
-		grid-area: e;
-		div {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 1em;
-		}
-	}
-	:nth-child(6) {
-		display: flex;
-		flex-direction: row;
-		grid-area: f;
-	}
-}
-
-button.buy-btn {
-	padding: 20px 60px;
-	border: solid white 2px;
-	border-radius: 42px;
-	font-size: 24px;
-}
-
-button.buy-btn:hover {
-	font-size: 24px;
-	background-color: #ffffff;
-	color: rgba(182, 204, 218, 1);
-	cursor: pointer;
-	padding: 20px 60px;
-	border-radius: 42px;
-}
-
-div.bg-card {
-	padding: 5px 30px;
-	border-radius: 10px;
-	margin: 0px 30px;
-	position: relative;
-	padding-top: 0;
-
-	&::before {
-		content: "";
-		position: absolute;
-		inset: 1.5rem 0 0;
-		background: #434558c3;
-		border-radius: 0.75rem;
-		z-index: -1;
-	}
-}
-
-div.bg-card:nth-child(2) {
-	&::before {
-		background-color: #6addccc3;
-	}
-}
-
-div.bg-card:nth-child(3) {
-	&::before {
-		background-color: #f9cdc4da;
-	}
-}
- */

@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const ArrowNav = () => {
 	return (
-		<div className="arrow-nav">
+		<div className="flex gap-[3em]">
 			<FaArrowLeft />
 			<button>1</button>
 			<FaArrowRight />
